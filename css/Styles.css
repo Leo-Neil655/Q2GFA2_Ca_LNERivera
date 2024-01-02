@@ -1,0 +1,111 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 6dvh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bnr txt {
+    text-decoration: none; 
+    color: white;
+    font-size: 5.5vh;
+}
+
+body {
+   background-image: url(../media/darkbg.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100vw;
+   height: 100vh;
+   position: relative;
+   display: inline-block;
+   z-index: 1;
+}
+
+.bnr {
+    width: 50vw;
+    height: 8vh;
+    text-align: center;
+    margin-left: 25vw;
+    margin-top: 46vh;
+    background-color: grey;
+    opacity: 0.8;
+    z-index: 4;
+
+}
+
+.Terran {
+    background-image: url(../media/Terran.gif);
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 3;
+    animation: TerranMotion 10s linear infinite;
+    background-repeat: no-repeat;
+}
+
+.Star {
+        background-image: url(../media/Star.gif);
+        width: 28vw;
+        height: 28vh;
+        position: absolute;
+        z-index: 1;
+        margin-left: 70vw;
+        margin-top: 40vh;
+        animation: StarRotate 15s linear infinite;
+        background-repeat: no-repeat;
+}
+
+.Iceworld {
+    background-image: url(../media/Iceworld.gif);
+        width: 29vw;
+        height: 29vh;
+        position: absolute;
+        z-index: 2;
+        margin-left: 30vw;
+        margin-top: 60vh;
+        animation: IceworldScale 16s linear infinite;
+        background-repeat: no-repeat;
+}
+
+.Blackhole {
+    background-image: url(../media/BlackHole.gif);
+        width: 40vw;
+        height: 40vh;
+        position: absolute;
+        z-index: 3;
+        margin-left: 50vw;
+        margin-top: 50vh;
+        animation: BlackholeSkew 20s linear infinite;
+        background-repeat: no-repeat;
+}
+
+@keyframes TerranMotion {
+  0%  {transform:translate(-10vw, 0vw);}
+  100% {transform:translate(100vw, 40vh);}
+}
+
+@keyframes StarRotate {
+    0%  {transform:rotate(-360deg);}
+    100% {transform:rotate(0deg);}
+  }
+
+@keyframes IceworldScale {
+    0%  {transform:scale(2,2);}
+    50%  {transform:scale(1,1);}
+    100%  {transform:scale(2,2);}
+  }
+
+@keyframes BlackholeSkew {
+    0%  {transform:skew(0deg, 0deg);}
+    25%  {transform:skew(20deg, 40deg);}
+    50%  {transform:skew(0deg, 0deg);}
+    75%  {transform:skew(-20deg, -40deg);}
+    100%  {transform:skew(0deg, 0deg);}
+  }
